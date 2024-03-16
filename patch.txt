@@ -1,0 +1,11 @@
+--- squashfs-tools/unsquashfs.c
++++ squashfs-tools-patched/unsquashfs.c
+@@ -39,6 +39,8 @@
+ #include <limits.h>
+ #include <ctype.h>
+
++#define FNM_EXTMATCH 0
++
+ int verbose;
+ struct cache *fragment_cache, *data_cache;
+ struct queue *to_reader, *to_inflate, *to_writer, *from_writer;
